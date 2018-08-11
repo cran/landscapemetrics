@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="date" content="2018-08-09" />
+
+<title>Get Started with landscapemetrics</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Get Started with landscapemetrics</h1>
+<h4 class="date"><em>2018-08-09</em></h4>
+
+
+<div id="TOC">
+<ul>
+<li><a href="#using-landscapemetrics">Using <strong>landscapemetrics</strong></a><ul>
+<li><a href="#important-information-about-using-landscapemetrics">Important information about using <strong>landscapemetrics</strong></a></li>
+<li><a href="#using-landscapemetrics-in-a-tidy-workflow">Using <strong>landscapemetrics</strong> in a tidy workflow</a><ul>
+<li><a href="#use-multiple-metric-functions">Use multiple metric functions</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<pre><code>#&gt; Warning: package 'dplyr' was built under R version 3.5.1</code></pre>
+<div id="using-landscapemetrics" class="section level1">
+<h1>Using <strong>landscapemetrics</strong></h1>
+<p>All functions in <strong>landscapemetrics</strong> start with <code>lsm_</code> (for landscapemetrics). The second part of the name specifies the level (patch - <code>p</code>, class - <code>c</code> or landscape - <code>l</code>). The last part of the function name is the abbreviation of the corresponding metric (e.g. <code>enn</code>for the euclidean nearest-neighbor distance):</p>
+<pre><code># general structure
+lsm_&quot;level&quot;_&quot;metric&quot;
+
+# Patch level
+## lsm_p_&quot;metric&quot;
+lsm_p_enn()
+
+# Class level
+## lsm_c_&quot;metric&quot;
+lsm_c_enn()
+
+# Landscape level
+## lsm_p_&quot;metric&quot;
+lsm_l_enn()</code></pre>
+<p>All functions return an identical structured tibble:</p>
+<p style="text-align:center;">
+<table>
+<thead>
+<tr class="header">
+<th>layer</th>
+<th>level</th>
+<th>class</th>
+<th>id</th>
+<th>metric</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>patch</td>
+<td>1</td>
+<td>1</td>
+<td>landscape metric</td>
+<td>x</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>class</td>
+<td>1</td>
+<td>NA</td>
+<td>landscape metric</td>
+<td>x</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>landscape</td>
+<td>NA</td>
+<td>NA</td>
+<td>landscape metric</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># Import raster</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">landscape_raster &lt;-<span class="st"> </span>landscape</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co"># for local file: raster(&quot;pathtoyourraster/raster.asc&quot;)</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co"># ... or any other raster file type, geotiff, ...</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co"># Calculate e.g. perimeter of all patches</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="kw">lsm_p_perim</span>(landscape_raster)</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt; # A tibble: 27 x 6</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt;    layer level class    id metric value</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt;    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt;  1     1 patch     1     1 perim      4</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt;  2     1 patch     1     2 perim    130</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;  3     1 patch     1     3 perim     12</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;  4     1 patch     1     4 perim     20</span></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt;  5     1 patch     1     5 perim      4</span></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt;  6     1 patch     1     6 perim     10</span></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt;  7     1 patch     1     7 perim      4</span></a>
+<a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt;  8     1 patch     1     8 perim      4</span></a>
+<a class="sourceLine" id="cb3-19" data-line-number="19"><span class="co">#&gt;  9     1 patch     1     9 perim      8</span></a>
+<a class="sourceLine" id="cb3-20" data-line-number="20"><span class="co">#&gt; 10     1 patch     2    10 perim     38</span></a>
+<a class="sourceLine" id="cb3-21" data-line-number="21"><span class="co">#&gt; # ... with 17 more rows</span></a></code></pre></div>
+<p>The metrics are encoded using abbreviations in the result tibble. In case you want to match the full name of each metric, we provide a tibble (<code>lsm_abbreciations_names</code>) you can join with the result tibble using the <code>metric</code> column. The this also adds the type of the metrics.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># Calculate metric</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">result &lt;-<span class="st"> </span><span class="kw">lsm_c_dcad</span>(landscape)</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co"># Left join with abbreviation tibble</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">result_full_name &lt;-<span class="st"> </span><span class="kw">left_join</span>(<span class="dt">x =</span> result, </a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">                                     <span class="dt">y =</span> lsm_abbreviations_names, </a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">                                     <span class="dt">by =</span> <span class="st">&quot;metric&quot;</span>)</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co"># Show results</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">result_full_name</a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt; # A tibble: 3 x 8</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;   layer level class    id metric  value full_name             type        </span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;   &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;                 &lt;chr&gt;       </span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt; 1     1 class     1    NA dcad    6667. disjunct core area d~ core area m~</span></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt; 2     1 class     2    NA dcad    8889. disjunct core area d~ core area m~</span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt; 3     1 class     3    NA dcad   13333. disjunct core area d~ core area m~</span></a></code></pre></div>
+<div id="important-information-about-using-landscapemetrics" class="section level2">
+<h2>Important information about using <strong>landscapemetrics</strong></h2>
+<p>The resolution of a raster cell has to be in <strong>meters</strong>, as the package converts units internally and returns results in either meters, square meters or hectares. For more information see the help file of each function.</p>
+</div>
+<div id="using-landscapemetrics-in-a-tidy-workflow" class="section level2">
+<h2>Using <strong>landscapemetrics</strong> in a tidy workflow</h2>
+<p>Every function in <em>landscapemetrics</em> accept data as its first argument, which makes piping a natural workflow. A possible use case is that you would load your spatial data, calculate some landscape metrics and then use the resulting tibble in further analyses.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co"># All patch IDs of class 2 with an ENN &gt; 2.5</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">subsample_patches &lt;-<span class="st"> </span>landscape <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="st">    </span><span class="kw">lsm_p_enn</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="st">    </span>dplyr<span class="op">::</span><span class="kw">filter</span>(class <span class="op">==</span><span class="st"> </span><span class="dv">2</span> <span class="op">&amp;</span><span class="st"> </span>value <span class="op">&gt;</span><span class="st"> </span><span class="fl">2.5</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="st">    </span>dplyr<span class="op">::</span><span class="kw">pull</span>(id)</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co"># Show results</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8">subsample_patches</a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;  [1] 10 11 12 13 14 15 16 17 19 21 23</span></a></code></pre></div>
+<div id="use-multiple-metric-functions" class="section level3">
+<h3>Use multiple metric functions</h3>
+<p>As the result of every function always returns a tibble, combining the metrics that were selected for your research question is straightforward:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co"># bind results from different metric functions</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">patch_metrics &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">  <span class="kw">lsm_p_cai</span>(landscape),</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">  <span class="kw">lsm_p_circle</span>(landscape),</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">  <span class="kw">lsm_p_enn</span>(landscape)</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6">  )</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co"># look at the results</span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8">patch_metrics </a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt; # A tibble: 81 x 6</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;    layer level class    id metric value</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  1     1 patch     1     1 cai      0  </span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt;  2     1 patch     1     2 cai     48.6</span></a>
+<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt;  3     1 patch     1     3 cai     20  </span></a>
+<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#&gt;  4     1 patch     1     4 cai     14.3</span></a>
+<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt;  5     1 patch     1     5 cai      0  </span></a>
+<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="co">#&gt;  6     1 patch     1     6 cai      0  </span></a>
+<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="co">#&gt;  7     1 patch     1     7 cai      0  </span></a>
+<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="co">#&gt;  8     1 patch     1     8 cai      0  </span></a>
+<a class="sourceLine" id="cb6-20" data-line-number="20"><span class="co">#&gt;  9     1 patch     1     9 cai      0  </span></a>
+<a class="sourceLine" id="cb6-21" data-line-number="21"><span class="co">#&gt; 10     1 patch     2    10 cai     42.9</span></a>
+<a class="sourceLine" id="cb6-22" data-line-number="22"><span class="co">#&gt; # ... with 71 more rows</span></a></code></pre></div>
+<p>Additionally, we provide a wrapper where the desired metrics can be specified as a vector of strings. Because all metrics regardless of the level return an identical tibble, different levels can be mixed. It is also possible to calculate all available metrics at a certain level using e.g. <code>what = &quot;patch&quot;</code></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">calculate_metrics</span>(landscape, <span class="dt">what =</span> <span class="kw">c</span>(<span class="st">&quot;lsm_c_pland&quot;</span>, <span class="st">&quot;lsm_l_ta&quot;</span>, <span class="st">&quot;lsm_l_te&quot;</span>))</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="co">#&gt; # A tibble: 5 x 6</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co">#&gt;   layer level     class    id metric  value</span></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;     &lt;int&gt; &lt;int&gt; &lt;chr&gt;   &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt; 1     1 class         1    NA pland   19.9 </span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt; 2     1 class         2    NA pland   26.9 </span></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt; 3     1 class         3    NA pland   53.2 </span></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt; 4     1 landscape    NA    NA ta       0.09</span></a>
+<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt; 5     1 landscape    NA    NA te     364</span></a></code></pre></div>
+<p>All metrics are abbreviated in the result <code>tibble</code>. Therefore, we provide a <code>tibble</code> containing the full metric names, as well as the class of each metric (<code>lsm_abbreviations_names</code>). Using e.g. the <code>left_join()</code> function of the <code>dplyr</code> package one could join a result <code>tibble</code> and the abbrevations <code>tibble</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="co"># bind results from different metric functions</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">patch_metrics &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">  <span class="kw">lsm_p_cai</span>(landscape),</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">  <span class="kw">lsm_p_circle</span>(landscape),</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6">  <span class="kw">lsm_p_enn</span>(landscape)</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7">  )</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co"># look at the results</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9">patch_metrics_full_names &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">left_join</span>(<span class="dt">x =</span> patch_metrics,</a>
+<a class="sourceLine" id="cb8-10" data-line-number="10">                                             <span class="dt">y =</span> lsm_abbreviations_names, </a>
+<a class="sourceLine" id="cb8-11" data-line-number="11">                                             <span class="dt">by =</span> <span class="st">&quot;metric&quot;</span>)</a>
+<a class="sourceLine" id="cb8-12" data-line-number="12">patch_metrics_full_names</a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt; # A tibble: 81 x 8</span></a>
+<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt;    layer level class    id metric value full_name       type            </span></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt;    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;           </span></a>
+<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt;  1     1 patch     1     1 cai      0   core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-17" data-line-number="17"><span class="co">#&gt;  2     1 patch     1     2 cai     48.6 core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-18" data-line-number="18"><span class="co">#&gt;  3     1 patch     1     3 cai     20   core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-19" data-line-number="19"><span class="co">#&gt;  4     1 patch     1     4 cai     14.3 core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-20" data-line-number="20"><span class="co">#&gt;  5     1 patch     1     5 cai      0   core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-21" data-line-number="21"><span class="co">#&gt;  6     1 patch     1     6 cai      0   core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-22" data-line-number="22"><span class="co">#&gt;  7     1 patch     1     7 cai      0   core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-23" data-line-number="23"><span class="co">#&gt;  8     1 patch     1     8 cai      0   core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-24" data-line-number="24"><span class="co">#&gt;  9     1 patch     1     9 cai      0   core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-25" data-line-number="25"><span class="co">#&gt; 10     1 patch     2    10 cai     42.9 core area index core area metric</span></a>
+<a class="sourceLine" id="cb8-26" data-line-number="26"><span class="co">#&gt; # ... with 71 more rows</span></a></code></pre></div>
+<p>In <code>calculate_metrics</code> this exists as option (<code>full_name = TRUE</code>).</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">calculate_metrics</span>(landscape, <span class="dt">what =</span> <span class="kw">c</span>(<span class="st">&quot;lsm_c_pland&quot;</span>, <span class="st">&quot;lsm_l_ta&quot;</span>, <span class="st">&quot;lsm_l_te&quot;</span>), </a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">              <span class="dt">full_name =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#&gt; # A tibble: 5 x 8</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#&gt;   layer level    class    id metric  value full_name         type         </span></a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;    &lt;int&gt; &lt;int&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;             &lt;chr&gt;        </span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt; 1     1 class        1    NA pland   19.9  percentage of la~ area and ege~</span></a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt; 2     1 class        2    NA pland   26.9  percentage of la~ area and ege~</span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt; 3     1 class        3    NA pland   53.2  percentage of la~ area and ege~</span></a>
+<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt; 4     1 landsca~    NA    NA ta       0.09 total area        area and ege~</span></a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt; 5     1 landsca~    NA    NA te     364    total edge        area and ege~</span></a></code></pre></div>
+</div>
+</div>
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
