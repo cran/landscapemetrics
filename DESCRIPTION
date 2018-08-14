@@ -1,7 +1,8 @@
 Type: Package
 Package: landscapemetrics
 Title: Landscape Metrics for Categorical Map Patterns
-Version: 0.1.0
+Version: 0.1.1
+Date: 2018-10-08
 Authors@R: c(person("Maximillian H.K.", "Hesselbarth", email = "maximilian.hesselbarth@uni-goettingen.de",
              role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1125-9918")),
              person("Marco", "Sciaini", email = "sciaini.marco@gmail.com",
@@ -45,7 +46,7 @@ RoxygenNote: 6.1.0
 SystemRequirements: C++11
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2018-08-09 07:31:37 UTC; Maximilian
+Packaged: 2018-08-14 13:51:21 UTC; Maximilian
 Author: Maximillian H.K. Hesselbarth [aut, cre]
     (<https://orcid.org/0000-0003-1125-9918>),
   Marco Sciaini [aut] (<https://orcid.org/0000-0002-3042-5435>),
@@ -58,4 +59,4 @@ Author: Maximillian H.K. Hesselbarth [aut, cre]
   Florian Privé [ctb] (Original author of underlying C++ code for
     get_nearestneighbour() function)
 Repository: CRAN
-Date/Publication: 2018-08-11 22:00:03 UTC
+Date/Publication: 2018-08-14 15:20:03 UTC
