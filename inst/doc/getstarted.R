@@ -50,7 +50,7 @@ patch_metrics <- bind_rows(
 patch_metrics 
 
 ## ---- message=FALSE------------------------------------------------------
-calculate_metrics(landscape, what = c("lsm_c_pland", "lsm_l_ta", "lsm_l_te"))
+calculate_lsm(landscape, what = c("lsm_c_pland", "lsm_l_ta", "lsm_l_te"))
 
 ## ---- message=FALSE------------------------------------------------------
 
@@ -67,7 +67,7 @@ patch_metrics_full_names <- dplyr::left_join(x = patch_metrics,
 patch_metrics_full_names
 
 ## ------------------------------------------------------------------------
-calculate_metrics(landscape, what = c("lsm_c_pland", "lsm_l_ta", "lsm_l_te"), 
+calculate_lsm(landscape, what = c("lsm_c_pland", "lsm_l_ta", "lsm_l_te"), 
               full_name = TRUE)
 
 
