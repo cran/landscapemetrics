@@ -1,6 +1,6 @@
-d629302075a69fd8031331ac88f321f3 *DESCRIPTION
+dc94bbb76ed215cec858c8b1cd1cec39 *DESCRIPTION
 0e5b54a899260c3cc8bfc74d679481c8 *NAMESPACE
-cfd7d3e1afaa02ce67f3ec075ccafd70 *NEWS.md
+0ef6727722e8e71ac767bf8cb9f54e95 *NEWS.md
 d31f733cbb58621cabb1b0034c9f2ed6 *R/RcppExports.R
 42105ef2f83c77b40b9e8161c8cc4c5a *R/calculate_correlation.R
 dc04fc8075ed7d5bbaf33491b4bcd90d *R/calculate_lsm.R
@@ -66,9 +66,9 @@ a41dfba8f378f046cf65d625b48605ab *R/lsm_c_para_sd.R
 977e02cf6d15572f407c10d323d9fd9b *R/lsm_c_pd.R
 7f4ba64b07828b5e62aa19e76a005762 *R/lsm_c_pladj.R
 15c3cd324ea478039d27b48d137d17ad *R/lsm_c_pland.R
-e6964a37220707fb63da2d825e9cc7f4 *R/lsm_c_shape_cv.R
-224f6f835b8d210c5c2895f9cabd1b66 *R/lsm_c_shape_mn.R
-e3fee25a7a74f25c5b903adf8b5417eb *R/lsm_c_shape_sd.R
+548caf047f19465d37877ee3282d1852 *R/lsm_c_shape_cv.R
+9548da5b515a0d77d29ccc179db7d2de *R/lsm_c_shape_mn.R
+1bfa37c52cd3f0daba4cf1857bb84536 *R/lsm_c_shape_sd.R
 3d3de5a31a85d12e263c5a3793029f93 *R/lsm_c_split.R
 c57d1f1042da19c1ff3ef491a38620cb *R/lsm_c_tca.R
 e9e526913328f2ffbd8435ef19db977f *R/lsm_c_te.R
@@ -126,9 +126,9 @@ e4177c2c1f7bd3ba0edd32875b043bcf *R/lsm_l_pd.R
 3df552078f5a3b3876eac943bc92b1e2 *R/lsm_l_pr.R
 5290b1ad0ce5d96b07a01cae881df41b *R/lsm_l_prd.R
 a2dba3f8936b14e907f0932b61684249 *R/lsm_l_rpr.R
-0daea9c83506fca1745ca87bb34f343d *R/lsm_l_shape_cv.R
-98f16863fc35f625ed7047e585e5cea3 *R/lsm_l_shape_mn.R
-55acad731b7fbf0f9c8e127e6a2c2558 *R/lsm_l_shape_sd.R
+31ca3b387e9d4f30984d56408c032d21 *R/lsm_l_shape_cv.R
+e0077a4687324734c6921105731cdb48 *R/lsm_l_shape_mn.R
+c3eeec50ea4b863cc7f20243748af138 *R/lsm_l_shape_sd.R
 0d95e52b717ebd51861b360b68b88a4a *R/lsm_l_shdi.R
 d6b93f51f7f18766b3cc645f95905057 *R/lsm_l_shei.R
 c86bddd52c14490cb3164c2407ba16e2 *R/lsm_l_sidi.R
@@ -148,7 +148,7 @@ eb644f0efb92b18d059e9f8ef1db4f16 *R/lsm_p_gyrate.R
 f897cb712ddc8c816e8b17ec6a630642 *R/lsm_p_ncore.R
 5a47d971c63634eed1e7df5dd0f38539 *R/lsm_p_para.R
 4d59b792e71e1e6bc5a774635b7d2721 *R/lsm_p_perim.R
-f30e2180e948050a08aaf4453d39c9e3 *R/lsm_p_shape.R
+dec3d557768ef7f4ac42256025f9fdde *R/lsm_p_shape.R
 368c944c1f434edf63d6b63c0091dba8 *R/matrix_to_raster.R
 9a8d37e0a5c01ed4e832a9e1abbaf6aa *R/onUnload.R
 ce256b315d0982acf6ad80af3ec4f71f *R/options_landscapemetrics.R
@@ -179,10 +179,10 @@ fbcd61e4301755fa3ebf51b4517181c1 *data/fragstats_patch_podlasie.rda
 f05caaa0aa30739b6048c65b210cc973 *data/landscape.rda
 c007e2a74249e21a2fb23b37de740b2a *data/lsm_abbreviations_names.rda
 0d64ff638e5455fe2ab7aa1f329eece6 *data/podlasie_ccilc.rda
-1d02f8b2d4dd9cd8f7e4d262cc3fa487 *inst/CITATION
+283472efa24da0e2d2b1d9defce73775 *inst/CITATION
 d1e25413552cdba728f42fa68fec5aca *inst/doc/getstarted.R
 a5247141d8412361df1495a920c02eca *inst/doc/getstarted.Rmd
-5dfc8b370de79cfd8b8f64bb44c3895d *inst/doc/getstarted.html
+0486b3e11686e00e95a8c4edf3ebdf3f *inst/doc/getstarted.html
 37044560676f97c5c9e00c68ca3e22ea *man/augusta_nlcd.Rd
 a12125e948709c1eab6b8d3b7cfa529c *man/calculate_correlation.Rd
 8cee6fe622054bdf2fb13934431ee44e *man/calculate_lsm.Rd
@@ -190,7 +190,7 @@ cddaaceae2a556f03ee2da7e9a216ca7 *man/check_landscape.Rd
 5937c58fa1dd0426638432c1929d596e *man/construct_buffer.Rd
 60bac97ee673318371ac93951f77e411 *man/data_info.Rd
 b63f4651a41b9768525435f3a379878d *man/extract_lsm.Rd
-6433f14270ef75f6b630834b2fdfbc1f *man/figures/README-unnamed-chunk-1-1.png
+1ccaf6dd59ec1325ea4e5a63ae3b04ed *man/figures/README-unnamed-chunk-1-1.png
 f625bbe0a42b4e5359ce1208ab8b1ab1 *man/figures/logo.png
 741e1c11f54f480b3268aba2f5ea5de5 *man/fragstats_class_augusta_nlcd.Rd
 4f512bc6f26c4f7577ef9f826ba4db22 *man/fragstats_class_landscape.Rd
@@ -320,7 +320,7 @@ f36f0a48b5e1bf0a0ac8882a9ca44e87 *man/lsm_l_ndca.Rd
 f00ef00fe3e286ec338330cdd2220652 *man/lsm_l_pr.Rd
 25e056f2472d6dd3e44ad6828fa666b9 *man/lsm_l_prd.Rd
 bfd547d9e0b569ab13a81153791d92da *man/lsm_l_rpr.Rd
-a185cdae95ad54bd096bcf435859e806 *man/lsm_l_shape_cv.Rd
+5cc1a3391a954f2618a2e9406596efa4 *man/lsm_l_shape_cv.Rd
 84273b6e7996fc4d42576aaa35d475b1 *man/lsm_l_shape_mn.Rd
 3c4d2d3279e4bb7a5c097e8bdac88f13 *man/lsm_l_shape_sd.Rd
 78f2f7ea81bfd9821e9c1fa977a7fd19 *man/lsm_l_shdi.Rd
