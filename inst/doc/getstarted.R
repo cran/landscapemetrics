@@ -1,4 +1,4 @@
-## ----setup, include = FALSE----------------------------------------------
+## ----setup, include = FALSE---------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -9,7 +9,7 @@ library(landscapemetrics)
 library(raster)
 library(dplyr)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 # import raster
 # for local file: raster("pathtoyourraster/raster.asc")
 # ... or any other raster file type, geotiff, ...
@@ -21,7 +21,7 @@ check_landscape(landscapemetrics::podlasie_ccilc) # wrong units
 
 check_landscape(landscapemetrics::augusta_nlcd) # everything is ok
 
-## ---- message=FALSE------------------------------------------------------
+## ---- message=FALSE-----------------------------------------------------------
 # import raster
 # for local file: raster("pathtoyourraster/raster.asc")
 # ... or any other raster file type, geotiff, ...
@@ -29,7 +29,7 @@ check_landscape(landscapemetrics::augusta_nlcd) # everything is ok
 # Calculate e.g. perimeter of all patches
 lsm_p_perim(landscape)
 
-## ---- message=FALSE------------------------------------------------------
+## ---- message=FALSE-----------------------------------------------------------
 # all patch IDs of class 2 with an ENN > 2.5
 subsample_patches <- landscape %>% 
     lsm_p_enn() %>%
@@ -39,7 +39,7 @@ subsample_patches <- landscape %>%
 # show results
 subsample_patches
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 # list all available metrics
 list_lsm()
 
@@ -53,7 +53,7 @@ list_lsm(level = c("patch", "landscape"),
          type = "core area metric", 
          simplify = TRUE)
 
-## ---- message=FALSE------------------------------------------------------
+## ---- message=FALSE-----------------------------------------------------------
 # bind results from different metric functions
 patch_metrics <- dplyr::bind_rows(
   lsm_p_cai(landscape),
@@ -64,7 +64,7 @@ patch_metrics <- dplyr::bind_rows(
 # look at the results
 patch_metrics 
 
-## ---- message=FALSE------------------------------------------------------
+## ---- message=FALSE-----------------------------------------------------------
 
 # bind results from different metric functions
 patch_metrics <- dplyr::bind_rows(
@@ -78,7 +78,7 @@ patch_metrics_full_names <- dplyr::left_join(x = patch_metrics,
                                              by = "metric")
 patch_metrics_full_names
 
-## ---- message=FALSE------------------------------------------------------
+## ---- message=FALSE-----------------------------------------------------------
 # calculate certain metrics
 calculate_lsm(landscape, 
               what = c("lsm_c_pland", "lsm_l_ta", "lsm_l_te"))

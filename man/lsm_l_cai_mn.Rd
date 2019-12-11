@@ -11,20 +11,40 @@
 \usage{
 lsm_l_cai_mn(landscape, directions, consider_boundary, edge_depth)
 
-\method{lsm_l_cai_mn}{RasterLayer}(landscape, directions = 8,
-  consider_boundary = FALSE, edge_depth = 1)
+\method{lsm_l_cai_mn}{RasterLayer}(
+  landscape,
+  directions = 8,
+  consider_boundary = FALSE,
+  edge_depth = 1
+)
 
-\method{lsm_l_cai_mn}{RasterStack}(landscape, directions = 8,
-  consider_boundary = FALSE, edge_depth = 1)
+\method{lsm_l_cai_mn}{RasterStack}(
+  landscape,
+  directions = 8,
+  consider_boundary = FALSE,
+  edge_depth = 1
+)
 
-\method{lsm_l_cai_mn}{RasterBrick}(landscape, directions = 8,
-  consider_boundary = FALSE, edge_depth = 1)
+\method{lsm_l_cai_mn}{RasterBrick}(
+  landscape,
+  directions = 8,
+  consider_boundary = FALSE,
+  edge_depth = 1
+)
 
-\method{lsm_l_cai_mn}{stars}(landscape, directions = 8,
-  consider_boundary = FALSE, edge_depth = 1)
+\method{lsm_l_cai_mn}{stars}(
+  landscape,
+  directions = 8,
+  consider_boundary = FALSE,
+  edge_depth = 1
+)
 
-\method{lsm_l_cai_mn}{list}(landscape, directions = 8,
-  consider_boundary = FALSE, edge_depth = 1)
+\method{lsm_l_cai_mn}{list}(
+  landscape,
+  directions = 8,
+  consider_boundary = FALSE,
+  edge_depth = 1
+)
 }
 \arguments{
 \item{landscape}{Raster* Layer, Stack, Brick or a list of rasterLayers.}
@@ -55,9 +75,9 @@ A cell is defined as core area if the cell has no neighbour with a different
 value than itself (rook's case).
 
 \subsection{Units}{Percent}
-\subsection{Range}{CAI_MN >= 0}
-\subsection{Behaviour}{Equals CAI_MN = 0 if CAI = 0 for all patches. Increases,
-without limit, as the core area indices increase.}
+\subsection{Range}{0 <= CAI_MN <= 100}
+\subsection{Behaviour}{CAI_MN = 0 when all patches have no core area and
+approaches CAI_MN = 100 with increasing percentage of core area within patches.}
 }
 \examples{
 lsm_l_cai_mn(landscape)
