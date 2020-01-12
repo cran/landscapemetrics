@@ -1,6 +1,6 @@
-ff35044b997209d871300a4973f96886 *DESCRIPTION
+82113b4d5a6c60876b0eaf7a2fd4a6eb *DESCRIPTION
 5696ec398d257971de720b44d2a6c94a *NAMESPACE
-c8ffc95f7ed42719e6e9e98119c71c84 *NEWS.md
+d5672d4f45ad45f760b2e21b23a8e7c9 *NEWS.md
 3193088dd66b2fa82fafaafc31adeb2d *R/RcppExports.R
 0708285ea419543863cf8cd5d3752fe7 *R/calculate_correlation.R
 e9928fcc9ae6417d6dbd08005be210e1 *R/calculate_lsm.R
@@ -165,7 +165,7 @@ a9fdcc842869ac9a1cefc81257b467fe *R/scale_window.R
 d987e628ec6c5112942d3ffdbdaf96af *R/spatialize_lsm.R
 f6b95c99ed83aa6429d0092ff44b2ced *R/unpad_raster.R
 a7b27996c872ea74671458ff61a1434f *R/window_lsm.R
-084be3425ae97c9a465c93fed7de2228 *build/vignette.rds
+e26b83bcdd9617acb31447b37ea83a93 *build/vignette.rds
 6651e6e02a6dffbb1a668ba75264f077 *data/augusta_nlcd.rda
 1a16ed75584cd3183189a77f95c4bce8 *data/fragstats_class_augusta_nlcd.rda
 18179da052f8ec96f0c86e6872237691 *data/fragstats_class_landscape.rda
@@ -182,7 +182,7 @@ c007e2a74249e21a2fb23b37de740b2a *data/lsm_abbreviations_names.rda
 67593287451691677be9ac82552d2186 *inst/CITATION
 a1c83c69ae08c44bda9f413da10a3f3f *inst/doc/getstarted.R
 39aaad6cd235db12efe73a6407949a9e *inst/doc/getstarted.Rmd
-65fe6732c0bdba6097305444ed9a6650 *inst/doc/getstarted.html
+fc32b44a162be5dcadb6f62d3ecc1438 *inst/doc/getstarted.html
 70040c648371493485226fdbf3762dc6 *man/augusta_nlcd.Rd
 e514c74331ad64fad29c3eafc1f3079a *man/calculate_correlation.Rd
 1353ff90b0033fef2d1f6b61b2513d97 *man/calculate_lsm.Rd
@@ -370,7 +370,7 @@ a4aecf31a1c1c1ca806c75d7e8c89533 *man/show_patches.Rd
 7521c58159d469a046b3ad2776e79660 *src/get_class_index_map.cpp
 9230306f38d3a039a4c4523d4fd0118a *src/get_class_index_map.h
 675b232fa3778edb46ed6381cf0dc664 *src/get_entropy.cpp
-f7903995b68f4e516b3929ee1e0e8055 *src/rcpp_cclabel.cpp
+08e9ddf82275125cb60551d28a36f560 *src/rcpp_cclabel.cpp
 8f2698d9c27359238517440c90601b00 *src/rcpp_cclabel.h
 8582f7b7ad1ad5bd705d1b8c34d36e00 *src/rcpp_create_neighborhood.cpp
 e763e02ccb77f7116b8033cdc7052b58 *src/rcpp_create_neighborhood.h
@@ -542,6 +542,7 @@ fd4509a1525885d26c15a5f82f781045 *tests/testthat/test-pad-raster.R
 728cf98ad2e8df221d72631b4ff0f3d1 *tests/testthat/test-raster-to-points.R
 6c55ef7a483eb78b75c35d4c7077c2c0 *tests/testthat/test-rcpp-get-coocurrence-matrix.R
 db7ee3df6cad78d8a7352b3cdbb5412b *tests/testthat/test-rcpp-get-entropy.R
+f71b6e6a015fbdd5e1b4cd3b62acae55 *tests/testthat/test-rcpp_ccl.R
 69001372a3e9eee065398c2daaabf056 *tests/testthat/test-sample-lsm.R
 fb7b76673bba8e5c5619db7853048cc1 *tests/testthat/test-scale-sample.R
 665773e1d071e91e84fd28a8fbed199e *tests/testthat/test-scale-window.R
