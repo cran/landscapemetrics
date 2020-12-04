@@ -1,6 +1,6 @@
-b97462b1b89e77a493b092b68d566e7c *DESCRIPTION
+e8d033467341c25dd9f273d79774d9a0 *DESCRIPTION
 a99444ae2e4ff4b388e51ba61b06299d *NAMESPACE
-0d8fae82300bf7cb66be7272303ee7c9 *NEWS.md
+580dc5715d7132775da51bb4c28d6510 *NEWS.md
 92ed954a8dbdd580f19fef04521bc657 *R/RcppExports.R
 0708285ea419543863cf8cd5d3752fe7 *R/calculate_correlation.R
 693763ca06c5ede569a4d9481ed53e9b *R/calculate_lsm.R
@@ -56,10 +56,10 @@ f1e451d1658e294b084ab526d68868f5 *R/lsm_c_gyrate_cv.R
 25fd71a35749df55f0a04cf6e365ada1 *R/lsm_c_gyrate_sd.R
 8ad06ae1d945910bdd08cde9770c28cd *R/lsm_c_iji.R
 8c6ab91c83400919609e868416e2f8e8 *R/lsm_c_lpi.R
-2953a5dbe4860bb3ff00ed4795c6f1af *R/lsm_c_lsi.R
+a12718034fd1c0291685d73a78fe8871 *R/lsm_c_lsi.R
 3d3a764594d123400e6f1e4dc227332f *R/lsm_c_mesh.R
 3232a20ac2c70bc245eabda0ee9363d7 *R/lsm_c_ndca.R
-6307d86c80b0fad3727abd3238d85d3d *R/lsm_c_nlsi.R
+afaac2b39fc2a0b58ac66da8b633e9b0 *R/lsm_c_nlsi.R
 fe839ad83e695744091b955c5397be72 *R/lsm_c_np.R
 bca68078bc3f87e1782925f3aeb0b56a *R/lsm_c_pafrac.R
 ca1613e3a8d83c7f34589c866bc9a927 *R/lsm_c_para_cv.R
@@ -112,7 +112,7 @@ b08fcb38d81b617abc4d1872d8ab0982 *R/lsm_l_gyrate_sd.R
 32eeb5c59a681b5d8eb6dd3d729303fc *R/lsm_l_iji.R
 e1273d3589e3bdced91918c9188e514b *R/lsm_l_joinent.R
 b1e9a480eb45e78a656a953c99641ac7 *R/lsm_l_lpi.R
-69cb1333186752a54de408700be52880 *R/lsm_l_lsi.R
+edc94f342513852892f8ff0d9faa8a22 *R/lsm_l_lsi.R
 2ecb3dcf1cb9e9c0680fa569b4250bec *R/lsm_l_mesh.R
 5fd97dca30e0355205aeec3b94437703 *R/lsm_l_msidi.R
 9c6a994fc4b5f6477b3c453c2bc79063 *R/lsm_l_msiei.R
@@ -168,7 +168,7 @@ b520815b912a1456a2a0dc9dec2ec3d0 *R/show_lsm.R
 1f8b3ca5e3bff6a27369d460981aae05 *R/spatialize_lsm.R
 b1be5309f3108a40a825abd044ee2f39 *R/unpad_raster.R
 b9ecdd5c76ba646639b1b29041e74cfd *R/window_lsm.R
-477e8b3f651155e0aef6515d15ddb036 *build/vignette.rds
+c16a0874adda4ef55a1596461c3112d7 *build/vignette.rds
 6651e6e02a6dffbb1a668ba75264f077 *data/augusta_nlcd.rda
 1a16ed75584cd3183189a77f95c4bce8 *data/fragstats_class_augusta_nlcd.rda
 18179da052f8ec96f0c86e6872237691 *data/fragstats_class_landscape.rda
@@ -185,7 +185,7 @@ cea84d897ce0ab0eb96b307682d2dd60 *data/podlasie_ccilc.rda
 67593287451691677be9ac82552d2186 *inst/CITATION
 a1c83c69ae08c44bda9f413da10a3f3f *inst/doc/getstarted.R
 39aaad6cd235db12efe73a6407949a9e *inst/doc/getstarted.Rmd
-713fa2431a98f1730efebe5f7421b156 *inst/doc/getstarted.html
+be574a703b417e3aeed60993357ed20f *inst/doc/getstarted.html
 e336759b55fed5ff236c61420cb45922 *man/augusta_nlcd.Rd
 e514c74331ad64fad29c3eafc1f3079a *man/calculate_correlation.Rd
 0b59046dc24cd8029d49e5b529035f6c *man/calculate_lsm.Rd
@@ -253,10 +253,10 @@ d1f7eb7dfcf11dc6b180f1fc7f1b231a *man/lsm_c_frac_sd.Rd
 2b97a3991061cd11024222b8cf6c8096 *man/lsm_c_gyrate_sd.Rd
 a0f401e418d5a7dd9de6d6cd93d838d6 *man/lsm_c_iji.Rd
 d9b7c5a5ecd5ce3000d2c17ae49eba87 *man/lsm_c_lpi.Rd
-c87dc230225f352a01671009fac4985c *man/lsm_c_lsi.Rd
+5af3c12f504d74b7df2af2ef4b3a8d20 *man/lsm_c_lsi.Rd
 1902ddf72066d797f621094c49308c4f *man/lsm_c_mesh.Rd
 4691dcdd79c17d09057d4375b8933607 *man/lsm_c_ndca.Rd
-c66358c9d81cd76d01c00e2560ed4e67 *man/lsm_c_nlsi.Rd
+1ca2fcacc4585deb2f68bca681a43324 *man/lsm_c_nlsi.Rd
 6588b788945db68fa384b20dcb152044 *man/lsm_c_np.Rd
 717f1f47c46a620bbdea8567ca8597c0 *man/lsm_c_pafrac.Rd
 54b70d703b3685a57354a103e94577f2 *man/lsm_c_para_cv.Rd
@@ -309,7 +309,7 @@ f015a377f22547dafa05e26b24059638 *man/lsm_l_gyrate_sd.Rd
 1b428f8b80526808d40ee11eb3ff9bd6 *man/lsm_l_iji.Rd
 ef04e2105a14a39497c8efaf440c2963 *man/lsm_l_joinent.Rd
 d92f4d533885b35ccec56d779ceba528 *man/lsm_l_lpi.Rd
-4e23a92c4548c18d8026cd25bc9d1cdc *man/lsm_l_lsi.Rd
+fe6592152c14e1a5d4ca2da2154dbcf7 *man/lsm_l_lsi.Rd
 b0d87e44b40a02429d896c11ddb863c2 *man/lsm_l_mesh.Rd
 e0a71269e8b1ad6f46ac506fce387fc8 *man/lsm_l_msidi.Rd
 63db32cc8c1be7cf95998b02ac295c78 *man/lsm_l_msiei.Rd
@@ -454,7 +454,7 @@ aef71bec5c72e6af47f15469b96e3031 *tests/testthat/test-lsm-c-lpi.R
 c3409930986b2d65fdba70a6f4a4149b *tests/testthat/test-lsm-c-lsi.R
 145fab2f49d64a718a26a0249ce50953 *tests/testthat/test-lsm-c-mesh.R
 9420d39f2bd06327a63af608c2234325 *tests/testthat/test-lsm-c-ndca.R
-a8bf434b12956a8cf1a5709f0db3c52d *tests/testthat/test-lsm-c-nlsi.R
+58af4a2c9334ef5057468b6ffd6c1a4f *tests/testthat/test-lsm-c-nlsi.R
 602ad3fc2eafc7309f912e76dee78e16 *tests/testthat/test-lsm-c-np.R
 cde8decdf1d9b8dae9b1749b473241e2 *tests/testthat/test-lsm-c-pafrac.R
 d3bef54113099cd1085cfb7efd9b09a1 *tests/testthat/test-lsm-c-para-cv.R
