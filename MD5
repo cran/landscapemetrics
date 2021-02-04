@@ -1,6 +1,6 @@
-e8d033467341c25dd9f273d79774d9a0 *DESCRIPTION
+5cefdcc161d50622afd8464d1e893317 *DESCRIPTION
 a99444ae2e4ff4b388e51ba61b06299d *NAMESPACE
-580dc5715d7132775da51bb4c28d6510 *NEWS.md
+a804827b3ba167bf9a4aebaec28a65dc *NEWS.md
 92ed954a8dbdd580f19fef04521bc657 *R/RcppExports.R
 0708285ea419543863cf8cd5d3752fe7 *R/calculate_correlation.R
 693763ca06c5ede569a4d9481ed53e9b *R/calculate_lsm.R
@@ -19,7 +19,7 @@ b6d8eee2d23c0b4f379a75a077fc12f7 *R/get_patches.R
 dbb71aa25dfd520722a9d0747996ce5f *R/landscape_as_list.R
 1b1819b38cc471be95c8cedc9a027797 *R/landscapemetrics-package.R
 17d0a43ea3e3d569fded1ff7d7be7600 *R/list_lsm.R
-4f83d9225f693a156aa2503b584c118f *R/lsm_c_ai.R
+ae73788760a5033d208b3429d2471e6d *R/lsm_c_ai.R
 d425efdba5ad859ffb0bdd6650503079 *R/lsm_c_area_cv.R
 5882c562cb701982f43243780a70e85e *R/lsm_c_area_mn.R
 ac2f142ddf1026a77da300b77600ee18 *R/lsm_c_area_sd.R
@@ -74,7 +74,7 @@ dfa9a5c94110462a56bd2018eb6930bf *R/lsm_c_shape_mn.R
 9b1c17908969fb511fa2d89cd6314b48 *R/lsm_c_split.R
 27d66313cba7095bd639db9d0a412770 *R/lsm_c_tca.R
 231d05f25047f243f9ecb13b91e7d761 *R/lsm_c_te.R
-5826da7adc8f7f3bf1d1c89994aab0d5 *R/lsm_l_ai.R
+7f4790e7ab2c66e79b6b1f2e12da91a3 *R/lsm_l_ai.R
 f520f3bf68dfeaf32e7bdc180a9b9c3f *R/lsm_l_area_cv.R
 7a77598d9bc2169e78aa84f285944680 *R/lsm_l_area_mn.R
 801b3de782429fc455fdc3081c68173b *R/lsm_l_area_sd.R
@@ -185,7 +185,7 @@ cea84d897ce0ab0eb96b307682d2dd60 *data/podlasie_ccilc.rda
 67593287451691677be9ac82552d2186 *inst/CITATION
 a1c83c69ae08c44bda9f413da10a3f3f *inst/doc/getstarted.R
 39aaad6cd235db12efe73a6407949a9e *inst/doc/getstarted.Rmd
-be574a703b417e3aeed60993357ed20f *inst/doc/getstarted.html
+0dabdac32fdc2461d31924be298e74b9 *inst/doc/getstarted.html
 e336759b55fed5ff236c61420cb45922 *man/augusta_nlcd.Rd
 e514c74331ad64fad29c3eafc1f3079a *man/calculate_correlation.Rd
 0b59046dc24cd8029d49e5b529035f6c *man/calculate_lsm.Rd
@@ -194,7 +194,7 @@ e514c74331ad64fad29c3eafc1f3079a *man/calculate_correlation.Rd
 78edd130d23d50d0e9060c49d8835dad *man/data_info.Rd
 c8de6bbe21a07a53393779bf02c81ed4 *man/extract_lsm.Rd
 65bb10a3e6841eda77ee11415a4048b1 *man/figures/README-unnamed-chunk-1-1.png
-65bb10a3e6841eda77ee11415a4048b1 *man/figures/REAsDME-unnamed-chunk-1-1.png
+e303d57819a1ab696c63c02d16c534ab *man/figures/README-unnamed-chunk-2-1.png
 f625bbe0a42b4e5359ce1208ab8b1ab1 *man/figures/logo.png
 41d223df7b4e34901e47a32352375b84 *man/fragstats_class_augusta_nlcd.Rd
 0178982514d6cb7e57a33c27d6c71ee1 *man/fragstats_class_landscape.Rd
@@ -271,7 +271,7 @@ f5808ac72656af4886a92e8b609a7f54 *man/lsm_c_shape_mn.Rd
 29c739542379aa830be6e897ed8dcf2e *man/lsm_c_split.Rd
 8bce59b3c6f53e3b01d53eb84da8aa53 *man/lsm_c_tca.Rd
 24b5d73723aa6fe93cf7c67601e7a3d1 *man/lsm_c_te.Rd
-d3182c77a654ae80f12aa14399cb41b9 *man/lsm_l_ai.Rd
+432102759496f291c975c7a30f0483a4 *man/lsm_l_ai.Rd
 015b8ceb920b59f354e8adcb9f61ee64 *man/lsm_l_area_cv.Rd
 234b456423d38541b563ccea992324f8 *man/lsm_l_area_mn.Rd
 f8605827aafbe52c594630d91846bb74 *man/lsm_l_area_sd.Rd
@@ -385,7 +385,7 @@ bf3bfe19c8754d4d5924ee89817a2f0d *src/rcpp_get_class_index_map.cpp
 83cb068a6d848b5453a64f111ae3496b *src/rcpp_get_composition_vector.cpp
 6e4e017dbc1290866a53859a0b00d344 *src/rcpp_get_coocurrence_matrix.cpp
 790193bf4c9133b39830b40fccf10fac *src/rcpp_get_coocurrence_matrix.h
-4656609f4899e6008ccdb56300363176 *src/rcpp_get_coocurrence_matrix_diag.cpp
+f7c6a81b0417f3c6e45bb5c895bc0ed4 *src/rcpp_get_coocurrence_matrix_diag.cpp
 20916b0c13043769cbbea902329306ea *src/rcpp_get_coocurrence_matrix_diag.h
 8206f139ae3faca4809630a310adbe0e *src/rcpp_get_coocurrence_vector.cpp
 be3f0a75562cf390b8de53efcf4052f0 *src/rcpp_get_coocurrence_vector.h
