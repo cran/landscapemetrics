@@ -1,7 +1,7 @@
 Type: Package
 Package: landscapemetrics
 Title: Landscape Metrics for Categorical Map Patterns
-Version: 1.5.5
+Version: 1.5.6
 Authors@R: c(person("Maximilian H.K.", "Hesselbarth",
              role = c("aut", "cre"),
              email = "mhk.hesselbarth@gmail.com",
@@ -50,18 +50,18 @@ License: GPL-3
 URL: https://r-spatialecology.github.io/landscapemetrics/
 BugReports: https://github.com/r-spatialecology/landscapemetrics/issues
 Depends: R (>= 3.1)
-Imports: cli, ggplot2, methods, raster, Rcpp, sp, stats, tibble
-Suggests: covr, dplyr, knitr, rgeos, rmarkdown, terra, testthat
-Enhances: stars, sf,
+Imports: cli, ggplot2, methods, Rcpp (>= 1.0.10), sp, stats, raster,
+        tibble
+Suggests: covr, dplyr, knitr, rmarkdown, terra, testthat
+Enhances: stars, sf
 LinkingTo: Rcpp, RcppArmadillo
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.1
-SystemRequirements: C++11
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2022-10-31 15:53:36 UTC; mhessel
+Packaged: 2023-03-23 08:21:06 UTC; hesselbarth
 Author: Maximilian H.K. Hesselbarth [aut, cre]
     (<https://orcid.org/0000-0003-1125-9918>),
   Marco Sciaini [aut] (<https://orcid.org/0000-0002-3042-5435>),
@@ -76,4 +76,4 @@ Author: Maximilian H.K. Hesselbarth [aut, cre]
     get_circumscribingcircle and lsm_p_circle),
   Matt Strimas-Mackey [ctb] (Bugfix in sample_metrics())
 Repository: CRAN
-Date/Publication: 2022-10-31 19:47:56 UTC
+Date/Publication: 2023-03-23 10:40:02 UTC
