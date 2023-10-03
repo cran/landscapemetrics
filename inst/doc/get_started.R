@@ -6,34 +6,39 @@ knitr::opts_chunk$set(
 
 ## ----load_libraries_hidden, eval=TRUE, echo=FALSE, message=FALSE, results='hide'----
 library(landscapemetrics)
-library(raster)
+library(terra)
 library(dplyr)
+
+# internal data needs to be read
+landscape <- terra::rast(landscapemetrics::landscape)
+augusta_nlcd <- terra::rast(landscapemetrics::augusta_nlcd)
+podlasie_ccilc <- terra::rast(landscapemetrics::podlasie_ccilc)
 
 ## -----------------------------------------------------------------------------
 # import raster
-# for local file: raster("pathtoyourraster/raster.asc")
+# for local file: rast("pathtoyourraster/raster.asc")
 # ... or any other raster file type, geotiff, ...
 
 # Check your landscape
-check_landscape(landscapemetrics::landscape) # because CRS is unkown, not clear
+check_landscape(landscape) # because CRS is unknown, not clear
 
-check_landscape(landscapemetrics::podlasie_ccilc) # wrong units
+check_landscape(podlasie_ccilc) # wrong units
 
-check_landscape(landscapemetrics::augusta_nlcd) # everything is ok
+check_landscape(augusta_nlcd) # everything is ok
 
-## ---- message=FALSE-----------------------------------------------------------
+## ----message=FALSE------------------------------------------------------------
 # import raster
-# for local file: raster("pathtoyourraster/raster.asc")
+# for local file: rast("pathtoyourraster/raster.asc")
 # ... or any other raster file type, geotiff, ...
 
 # Calculate e.g. perimeter of all patches
 lsm_p_perim(landscape)
 
-## ---- message=FALSE-----------------------------------------------------------
+## ----message=FALSE------------------------------------------------------------
 # all patch IDs of class 2 with an ENN > 2.5
-subsample_patches <- landscape %>% 
-    lsm_p_enn() %>%
-    dplyr::filter(class == 2 & value > 2.5) %>%
+subsample_patches <- landscape |> 
+    lsm_p_enn() |>
+    dplyr::filter(class == 2 & value > 2.5) |>
     dplyr::pull(id)
 
 # show results
@@ -53,7 +58,7 @@ list_lsm(level = c("patch", "landscape"),
          type = "core area metric", 
          simplify = TRUE)
 
-## ---- message=FALSE-----------------------------------------------------------
+## ----message=FALSE------------------------------------------------------------
 # bind results from different metric functions
 patch_metrics <- dplyr::bind_rows(
   lsm_p_cai(landscape),
@@ -64,8 +69,7 @@ patch_metrics <- dplyr::bind_rows(
 # look at the results
 patch_metrics 
 
-## ---- message=FALSE-----------------------------------------------------------
-
+## ----message=FALSE------------------------------------------------------------
 # bind results from different metric functions
 patch_metrics <- dplyr::bind_rows(
   lsm_p_cai(landscape),
@@ -78,7 +82,7 @@ patch_metrics_full_names <- dplyr::left_join(x = patch_metrics,
                                              by = "metric")
 patch_metrics_full_names
 
-## ---- message=FALSE-----------------------------------------------------------
+## ----message=FALSE------------------------------------------------------------
 # calculate certain metrics
 calculate_lsm(landscape, 
               what = c("lsm_c_pland", "lsm_l_ta", "lsm_l_te"))
