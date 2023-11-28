@@ -1,7 +1,7 @@
 Type: Package
 Package: landscapemetrics
 Title: Landscape Metrics for Categorical Map Patterns
-Version: 2.0.0
+Version: 2.1.0
 Authors@R: c(person("Maximilian H.K.", "Hesselbarth",
              role = c("aut", "cre"),
              email = "mhk.hesselbarth@gmail.com",
@@ -58,7 +58,7 @@ Config/testthat/edition: 3
 RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2023-10-03 07:19:35 UTC; hesselbarth
+Packaged: 2023-11-28 14:47:06 UTC; hesselbarth
 Author: Maximilian H.K. Hesselbarth [aut, cre]
     (<https://orcid.org/0000-0003-1125-9918>),
   Marco Sciaini [aut] (<https://orcid.org/0000-0002-3042-5435>),
@@ -73,4 +73,4 @@ Author: Maximilian H.K. Hesselbarth [aut, cre]
     get_circumscribingcircle and lsm_p_circle),
   Matt Strimas-Mackey [ctb] (Bugfix in sample_metrics())
 Repository: CRAN
-Date/Publication: 2023-10-03 13:00:02 UTC
+Date/Publication: 2023-11-28 16:40:07 UTC
