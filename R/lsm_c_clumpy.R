@@ -29,9 +29,6 @@
 #' landscape <- terra::rast(landscapemetrics::landscape)
 #' lsm_c_clumpy(landscape)
 #'
-#' @aliases lsm_c_clumpy
-#' @rdname lsm_c_clumpy
-#'
 #' @references
 #' McGarigal K., SA Cushman, and E Ene. 2023. FRAGSTATS v4: Spatial Pattern Analysis
 #' Program for Categorical Maps. Computer software program produced by the authors;
@@ -105,7 +102,7 @@ lsm_c_clumpy_calc <- function(landscape, resolution, extras = NULL){
     clumpy <- vapply(seq_along(g_i), FUN = function(i) {
 
         # set to NA if mathematical not possible
-        if (is.nan(g_i[i]) || is.na(g_i[i]) || p_i[i] == 1) numeric(NA)
+        if (is.nan(g_i[i]) || is.na(g_i[i]) || p_i[i] == 1) as.numeric(NA)
         # calc clumpy
         else if (g_i[i] >= p_i[i]) (g_i[i] - p_i[i]) / (1 - p_i[i])
         else if (g_i[i] < p_i[i] && p_i[i] >= 0.5) (g_i[i] - p_i[i]) / (1 - p_i[i])
