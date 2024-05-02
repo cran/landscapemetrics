@@ -1,6 +1,6 @@
-a7f12b21911bc732f7e340f8a61f48a4 *DESCRIPTION
+e760105560ebf2fe8976a54979eedcfa *DESCRIPTION
 0e83228aaa0183bde6accf5a54a3505f *NAMESPACE
-e27c479791c9d88b6c727041c77dffce *NEWS.md
+f342634c5e3ff51dcf20c3ba4a5caa48 *NEWS.md
 57af0fdf24bd61beb420a62a19e5fa77 *R/RcppExports.R
 396e9deba1bda66d0da7bf3ad09ad11e *R/calculate_correlation.R
 6d91f4376297dbf3c6ffab847d6cbf9d *R/calculate_lsm.R
@@ -147,7 +147,7 @@ e738f13771a4e7d5252c595cafefae11 *R/lsm_p_area.R
 84c70c0df28c61573e85726a07f3aca1 *R/lsm_p_core.R
 c580c0e4e640281853d9b19b3e2a3214 *R/lsm_p_enn.R
 05a37e7512c7ab8c0a2a72713c1139c9 *R/lsm_p_frac.R
-93a5cd314e2921aee4d6e2a1a54483f5 *R/lsm_p_gyrate.R
+9d6276377a95aeb625fe334e5331e91a *R/lsm_p_gyrate.R
 c2869262ac53fe02dbe9136c69c5a23d *R/lsm_p_ncore.R
 b40a96859f5c8f300589396295d4d030 *R/lsm_p_para.R
 613d55510ac03e4c0b38a437a8f448c9 *R/lsm_p_perim.R
@@ -165,11 +165,11 @@ a6d9cad84f85049812e5b59e12f6dc9d *R/show_cores.R
 002bab3db5f850b43db2de8acdc8f90e *R/show_correlation.R
 8ca0e98d8b90eb65973b30c05bfd746d *R/show_lsm.R
 260fa127d985ed2b9c63506e7fd6e9ac *R/show_patches.R
-98c82327d8a422d5d5f9d80831da6c4a *R/spatialize_lsm.R
+2142105e1b8dde1be8438932e3abf690 *R/spatialize_lsm.R
 c766b570d9dfce7c129eeb9490bb013c *R/sysdata.rda
 3789d735d5bc95c6729120d3965c1394 *R/unpad_raster.R
 4728a30b7d1d58db48830b6e0ce4924a *R/window_lsm.R
-c4ab8cf746cf422a2fe2a317821bb516 *build/vignette.rds
+fcd2433e13392e3b86d55b391f97da9d *build/vignette.rds
 06860e8424c07b9d39d834d16c99188d *data/augusta_nlcd.rda
 caeef9e3d1b024e68850dc4d74b282f0 *data/landscape.rda
 75a620034852205d870a0ec3bd299477 *data/lsm_abbreviations_names.rda
@@ -177,7 +177,7 @@ caeef9e3d1b024e68850dc4d74b282f0 *data/landscape.rda
 9e34e1bd1443acc228b7c6eebc5f01ec *inst/CITATION
 946da3eedbd2f44834995e242bf184f6 *inst/doc/get_started.R
 9ab81b364132a04ebd045f06482f8b8d *inst/doc/get_started.Rmd
-70024ed5c31dce4cda07374cf0ff64c4 *inst/doc/get_started.html
+096bd4acf3906574d98f927af453613b *inst/doc/get_started.html
 43485d6d620fafba3fe4d6a483ce6eb0 *man/augusta_nlcd.Rd
 a81178e6e5064d2ecbbba973e3d28d92 *man/calculate_correlation.Rd
 292d3d281e9713dd10d671f863afef5a *man/calculate_lsm.Rd
@@ -202,7 +202,7 @@ a65dba673aa8a07376c244662f07f143 *man/get_perimeter_patch.Rd
 9120576fb26ca37698a755aac6a495ac *man/get_unique_values.Rd
 d3522333c2130d147c67f05c62ebf6de *man/landscape.Rd
 e119b08c41a43ef938bd2f4a52661437 *man/landscape_as_list.Rd
-3edce42bbe92e0f4cace0f1cfeaa8f5c *man/landscapemetrics.Rd
+4ad9a4d17d0f2fc00e6ba6d4ad2c4625 *man/landscapemetrics.Rd
 a807da7edc19cc7c60b1386bc499aa30 *man/list_lsm.Rd
 e5ac391a3ad5affeb8b7988e8d4a6baf *man/lsm_abbreviations_names.Rd
 27b536731ca83157a12ff11d1792dc4b *man/lsm_c_ai.Rd
