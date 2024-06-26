@@ -19,6 +19,9 @@
 #' neighbour with a different value than themselves (rook's case). The metric describes the
 #' differences among all patches in the landscape.
 #'
+#' Because the metric is based on distances or areas please make sure your data
+#' is valid using \code{\link{check_landscape}}.
+#'
 #' \subsection{Units}{Hectares}
 #' \subsection{Range}{CORE_SD >= 0}
 #' \subsection{Behaviour}{Equals CORE_SD = 0 if all patches have the same core area.
@@ -26,7 +29,7 @@
 #'
 #' @seealso
 #' \code{\link{lsm_p_core}},
-#' \code{\link{sd}}, \cr
+#' \code{\link[stats]{sd}} \cr
 #' \code{\link{lsm_c_core_mn}},
 #' \code{\link{lsm_c_core_sd}},
 #' \code{\link{lsm_c_core_cv}}, \cr

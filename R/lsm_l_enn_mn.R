@@ -16,6 +16,9 @@
 #' of the same class i. The distance is measured from edge-to-edge. The range is limited
 #' by the cell resolution on the lower limit and the landscape extent on the upper limit.
 #'
+#' Because the metric is based on distances or areas please make sure your data
+#' is valid using \code{\link{check_landscape}}.
+#'
 #' \subsection{Units}{Meters}
 #' \subsection{Range}{ENN_MN > 0}
 #' \subsection{Behaviour}{Approaches ENN_MN = 0 as the distance to the nearest neighbour
@@ -25,7 +28,7 @@
 #'
 #' @seealso
 #' \code{\link{lsm_p_enn}},
-#' \code{\link{mean}}, \cr
+#' \code{\link[base]{mean}}, \cr
 #' \code{\link{lsm_c_enn_mn}},
 #' \code{\link{lsm_c_enn_sd}},
 #' \code{\link{lsm_c_enn_cv}}, \cr

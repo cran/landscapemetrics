@@ -15,6 +15,9 @@
 #' belonging to class i. The fractal dimension index is based on the patch perimeter and
 #' the patch area and describes the patch complexity.
 #'
+#' Because the metric is based on distances or areas please make sure your data
+#' is valid using \code{\link{check_landscape}}.
+#'
 #' \subsection{Units}{None}
 #' \subsection{Range}{FRAC_SD>= 0 }
 #' \subsection{Behaviour}{Equals FRAC_SD = 0 if the fractal dimension index is identical
@@ -23,7 +26,7 @@
 #'
 #' @seealso
 #' \code{\link{lsm_p_frac}},
-#' \code{\link{sd}}, \cr
+#' \code{\link[stats]{sd}} \cr
 #' \code{\link{lsm_c_frac_mn}},
 #' \code{\link{lsm_c_frac_cv}}, \cr
 #' \code{\link{lsm_l_frac_mn}},

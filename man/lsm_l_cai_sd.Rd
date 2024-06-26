@@ -40,6 +40,9 @@ A cell is defined as core area if the cell has no neighbour with a different
 value than itself (rook's case). The metric describes the differences among all patches
 in the landscape.
 
+Because the metric is based on distances or areas please make sure your data
+is valid using \code{\link{check_landscape}}.
+
 \subsection{Units}{Percent}
 \subsection{Range}{CAI_SD >= 0}
 \subsection{Behaviour}{Equals CAI_SD = 0 if the core area index is identical for
@@ -58,7 +61,7 @@ available at the following web site: https://www.fragstats.org
 }
 \seealso{
 \code{\link{lsm_p_cai}},
-\code{\link{sd}}, \cr
+\code{\link[stats]{sd}} \cr
 \code{\link{lsm_c_cai_mn}},
 \code{\link{lsm_c_cai_sd}},
 \code{\link{lsm_c_cai_cv}}, \cr

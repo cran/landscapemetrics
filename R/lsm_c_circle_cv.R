@@ -17,6 +17,9 @@
 #' patches of the same class i in the landscape. Because it is scaled to the mean,
 #' it is easily comparable.
 #'
+#' Because the metric is based on distances or areas please make sure your data
+#' is valid using \code{\link{check_landscape}}.
+#'
 #' \subsection{Units}{None}
 #' \subsection{Range}{CIRCLE_CV >= 0}
 #' \subsection{Behaviour}{Equals CIRCLE_CV if the related circumscribing circle is identical
@@ -25,7 +28,7 @@
 #'
 #' @seealso
 #' \code{\link{lsm_p_circle}},
-#' \code{\link{mean}}, \cr
+#' \code{\link[base]{mean}}, \cr
 #' \code{\link{lsm_c_circle_mn}},
 #' \code{\link{lsm_c_circle_sd}}, \cr
 #' \code{\link{lsm_l_circle_mn}},

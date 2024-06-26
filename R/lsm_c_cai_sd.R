@@ -21,6 +21,9 @@
 #' value than itself (rook's case). The metric describes the differences among patches
 #' of the same class i in the landscape.
 #'
+#' Because the metric is based on distances or areas please make sure your data
+#' is valid using \code{\link{check_landscape}}.
+#'
 #' \subsection{Units}{Percent}
 #' \subsection{Range}{CAI_SD >= 0}
 #' \subsection{Behaviour}{Equals CAI_SD = 0 if the core area index is identical
@@ -29,7 +32,7 @@
 #'
 #' @seealso
 #' \code{\link{lsm_p_cai}},
-#' \code{\link{sd}}, \cr
+#' \code{\link[stats]{sd}} \cr
 #' \code{\link{lsm_c_cai_mn}},
 #' \code{\link{lsm_c_cai_cv}}, \cr
 #' \code{\link{lsm_l_cai_mn}},

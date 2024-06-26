@@ -39,6 +39,9 @@ The core area index is the percentage of core area in relation to patch area.
 A cell is defined as core area if the cell has no neighbour with a different
 value than itself (rook's case).
 
+Because the metric is based on distances or areas please make sure your data
+is valid using \code{\link{check_landscape}}.
+
 \subsection{Units}{Percent}
 \subsection{Range}{0 <= CAI_MN <= 100}
 \subsection{Behaviour}{CAI_MN = 0 when all patches have no core area and
@@ -56,7 +59,7 @@ available at the following web site: https://www.fragstats.org
 }
 \seealso{
 \code{\link{lsm_p_cai}},
-\code{\link{mean}}, \cr
+\code{\link[base]{mean}}, \cr
 \code{\link{lsm_c_cai_sd}},
 \code{\link{lsm_c_cai_cv}}, \cr
 \code{\link{lsm_l_cai_mn}},

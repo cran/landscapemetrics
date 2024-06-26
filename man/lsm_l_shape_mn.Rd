@@ -26,6 +26,9 @@ SHAPE_MN is a 'Shape metric'. The landscape is summarised as the mean
 of all patches in the landscape. SHAPE describes the ratio between the actual perimeter of
 the patch and the square root of patch area.
 
+Because the metric is based on distances or areas please make sure your data
+is valid using \code{\link{check_landscape}}.
+
 \subsection{Units}{None}
 \subsection{Range}{SHAPE_SD >= 1}
 \subsection{Behaviour}{Equals SHAPE_MN = 1 if all patches are squares.
@@ -46,7 +49,7 @@ Wildl. Soc.Bull. 3:171-173.
 }
 \seealso{
 \code{\link{lsm_p_shape}},
-\code{\link{mean}}, \cr
+\code{\link[base]{mean}}, \cr
 \code{\link{lsm_c_shape_mn}},
 \code{\link{lsm_c_shape_sd}},
 \code{\link{lsm_c_shape_cv}}, \cr

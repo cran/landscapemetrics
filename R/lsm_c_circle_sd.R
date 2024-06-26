@@ -15,6 +15,9 @@
 #' and characterises the compactness of the patch. The metric describes the differences
 #' among patches of the same class i in the landscape.
 #'
+#' Because the metric is based on distances or areas please make sure your data
+#' is valid using \code{\link{check_landscape}}.
+#'
 #' \subsection{Units}{None}
 #' \subsection{Range}{CIRCLE_SD >= 0}
 #' \subsection{Behaviour}{Equals CIRCLE_SD if the related circumscribing circle is identical
@@ -23,7 +26,7 @@
 #'
 #' @seealso
 #' \code{\link{lsm_p_circle}},
-#' \code{\link{mean}}, \cr
+#' \code{\link[base]{mean}}, \cr
 #' \code{\link{lsm_c_circle_mn}},
 #' \code{\link{lsm_c_circle_cv}}, \cr
 #' \code{\link{lsm_l_circle_mn}},

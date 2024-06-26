@@ -18,6 +18,9 @@
 #' on the upper limit. The metric is a simple way to describe patch isolation. Because it is
 #' scaled to the mean, it is easily comparable among different landscapes.
 #'
+#' Because the metric is based on distances or areas please make sure your data
+#' is valid using \code{\link{check_landscape}}.
+#'
 #' \subsection{Units}{Meters}
 #' \subsection{Range}{ENN_SD >= 0}
 #' \subsection{Behaviour}{Equals ENN_SD = 0 if the euclidean nearest-neighbor distance is
@@ -25,7 +28,7 @@
 #'
 #' @seealso
 #' \code{\link{lsm_p_enn}},
-#' \code{\link{sd}}, \cr
+#' \code{\link[stats]{sd}} \cr
 #' \code{\link{lsm_c_enn_mn}},
 #' \code{\link{lsm_c_enn_cv}}, \cr
 #' \code{\link{lsm_l_enn_mn}},

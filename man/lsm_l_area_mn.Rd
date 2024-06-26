@@ -27,6 +27,9 @@ to describe the composition of the landscape. Especially together with the total
 landscape area (\code{\link{lsm_l_ta}}), it can also give an an idea of patch structure
 (e.g. many small patches vs. few larges patches).
 
+Because the metric is based on distances or areas please make sure your data
+is valid using \code{\link{check_landscape}}.
+
 \subsection{Units}{Hectares}
 \subsection{Range}{AREA_MN > 0}
 \subsection{Behaviour}{Approaches AREA_MN = 0 if all patches are small. Increases, without
@@ -44,7 +47,7 @@ available at the following web site: https://www.fragstats.org
 }
 \seealso{
 \code{\link{lsm_p_area}},
-\code{\link{mean}}, \cr
+\code{\link[base]{mean}}, \cr
 \code{\link{lsm_c_area_mn}},
 \code{\link{lsm_c_area_sd}},
 \code{\link{lsm_c_area_cv}} \cr

@@ -16,6 +16,9 @@
 #' (e.g. a square), it is not scale independent, meaning that increasing the patch size
 #' while not changing the patch form will change the ratio.
 #'
+#' Because the metric is based on distances or areas please make sure your data
+#' is valid using \code{\link{check_landscape}}.
+#'
 #' \subsection{Units}{None}
 #' \subsection{Range}{PARA_SD >= 0}
 #' \subsection{Behaviour}{Equals PARA_SD = 0 if the perimeter-area ratio is identical for
@@ -24,7 +27,7 @@
 #'
 #' @seealso
 #' \code{\link{lsm_p_para}},
-#' \code{\link{sd}}, \cr
+#' \code{\link[stats]{sd}} \cr
 #' \code{\link{lsm_c_para_mn}},
 #' \code{\link{lsm_c_para_cv}}, \cr
 #' \code{\link{lsm_l_para_mn}},

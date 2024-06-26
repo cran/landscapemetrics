@@ -36,6 +36,9 @@ CORE_MN is a 'Core area metric' and equals the mean of core areas of all patches
 belonging to class i. The core area is defined as all cells that have no
 neighbour with a different value than themselves (rook's case).
 
+Because the metric is based on distances or areas please make sure your data
+is valid using \code{\link{check_landscape}}.
+
 \subsection{Units}{Hectares}
 \subsection{Range}{CORE_MN >= 0}
 \subsection{Behaviour}{Equals CORE_MN = 0 if CORE = 0 for all patches. Increases,
@@ -53,7 +56,7 @@ available at the following web site: https://www.fragstats.org
 }
 \seealso{
 \code{\link{lsm_p_core}},
-\code{\link{mean}}, \cr
+\code{\link[base]{mean}}, \cr
 \code{\link{lsm_c_core_sd}},
 \code{\link{lsm_c_core_cv}}, \cr
 \code{\link{lsm_l_core_mn}},
