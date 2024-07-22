@@ -1,7 +1,7 @@
-5d4c9eecce0028c94a3133b85a9a48fd *DESCRIPTION
-0e83228aaa0183bde6accf5a54a3505f *NAMESPACE
-2b5631c46150a46fe6fc0daa0a7d3a02 *NEWS.md
-d5f91c545a2a99f7dd9d0d176b6bb9b7 *R/RcppExports.R
+99c84c64ccf5afb583e5d14ef549b2e5 *DESCRIPTION
+b8f0ad2a935ba9a2bb45dc878d1e7972 *NAMESPACE
+4bbb18ab207158301b128223ef2a8644 *NEWS.md
+57af0fdf24bd61beb420a62a19e5fa77 *R/RcppExports.R
 396e9deba1bda66d0da7bf3ad09ad11e *R/calculate_correlation.R
 fba37f15535c7faa8eb4486a246ab8fb *R/calculate_lsm.R
 6106258257bb0e487499cc4221aa0aff *R/check_landscape.R
@@ -16,7 +16,7 @@ fa8eef269fa03c75183e64d1d754a4a4 *R/get_circumscribingcircle.R
 d81052aed4e5715af1d81912746296cc *R/get_nearestneighbour.R
 899f2ba2c6365bb97d1cf258695e3fff *R/get_patches.R
 d580935c0ea21246a3e49ad819542ce0 *R/get_unique_values.R
-4febcbf0f0805f27fc78a5912304df4f *R/landscape_as_list.R
+1f037ab7ec7adf19046ef180fa7d1645 *R/landscape_as_list.R
 b2830c01d4f094e588b96fcc9ede8ded *R/landscapemetrics-package.R
 726f5beb01988e23eedbcfdb567cdafe *R/list_lsm.R
 49315d1ddc3fd82c445fa374927748b1 *R/lsm_c_ai.R
@@ -169,15 +169,15 @@ d3d81f7fc699a4530be13038e3073385 *R/spatialize_lsm.R
 c766b570d9dfce7c129eeb9490bb013c *R/sysdata.rda
 3789d735d5bc95c6729120d3965c1394 *R/unpad_raster.R
 ac13ac51f72a3bd8f22f1e01bf26c020 *R/window_lsm.R
-e8b32f99729d91272ed615af1c07820c *build/vignette.rds
+28e4331238cb8049f3f1066392e58f75 *build/vignette.rds
 06860e8424c07b9d39d834d16c99188d *data/augusta_nlcd.rda
 caeef9e3d1b024e68850dc4d74b282f0 *data/landscape.rda
 75a620034852205d870a0ec3bd299477 *data/lsm_abbreviations_names.rda
 5ec4bc022793f2f6516a20d963b8148a *data/podlasie_ccilc.rda
 9e34e1bd1443acc228b7c6eebc5f01ec *inst/CITATION
-e467459fb92d57d0fd4457752d62bc97 *inst/doc/get_started.R
+946da3eedbd2f44834995e242bf184f6 *inst/doc/get_started.R
 9ab81b364132a04ebd045f06482f8b8d *inst/doc/get_started.Rmd
-1aa098063f0266a2da51d20650d92e92 *inst/doc/get_started.html
+f6575d09aa2105c1b9a34098fefee2dd *inst/doc/get_started.html
 43485d6d620fafba3fe4d6a483ce6eb0 *man/augusta_nlcd.Rd
 a81178e6e5064d2ecbbba973e3d28d92 *man/calculate_correlation.Rd
 9e7fabd60e230d97423182d397a8c93a *man/calculate_lsm.Rd
@@ -201,7 +201,7 @@ a65dba673aa8a07376c244662f07f143 *man/get_perimeter_patch.Rd
 88059d1443be1f0bc0e2f91f8653bc97 *man/get_points.Rd
 9120576fb26ca37698a755aac6a495ac *man/get_unique_values.Rd
 d3522333c2130d147c67f05c62ebf6de *man/landscape.Rd
-e119b08c41a43ef938bd2f4a52661437 *man/landscape_as_list.Rd
+74db832d8ef8235fd10237d11943560b *man/landscape_as_list.Rd
 4ad9a4d17d0f2fc00e6ba6d4ad2c4625 *man/landscapemetrics.Rd
 a807da7edc19cc7c60b1386bc499aa30 *man/list_lsm.Rd
 e5ac391a3ad5affeb8b7988e8d4a6baf *man/lsm_abbreviations_names.Rd
@@ -398,7 +398,7 @@ bfd353d5c4c37ff99302ddda9b1fe271 *tests/testthat/test-extract-lsm.R
 51011047e385c5468a6bf39ee3392a6d *tests/testthat/test-get-nearestneighbour.R
 eddb4ba504a98fdbdf0e3e1ef7cfa066 *tests/testthat/test-get-patches.R
 96380d408bea40f126a1635f90100a45 *tests/testthat/test-get-unique-values.R
-207f8cedfbee2e6683a87471cbc0c862 *tests/testthat/test-landscape_as_list.R
+75a05a14bdfdbd9e102c6107798e520e *tests/testthat/test-landscape_as_list.R
 42e31126fb339b285e3b04c62cf7435b *tests/testthat/test-list-lsm.R
 6df6a21386866e01820da94a769e7f30 *tests/testthat/test-lsm-c-ai.R
 c84cd6f1c74329062150ca078456d4bb *tests/testthat/test-lsm-c-area-cv.R
